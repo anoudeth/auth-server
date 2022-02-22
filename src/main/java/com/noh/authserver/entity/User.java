@@ -39,7 +39,7 @@ public class User extends BaseIdEntity implements UserDetails {
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "role_user",
             joinColumns = {@JoinColumn(name = "user_id", foreignKey = @ForeignKey(name = "FK_USER_ROLEUSER"))},
-            inverseJoinColumns = {@JoinColumn(name = "role_id", foreignKey = @ForeignKey(name = "FK_USER_ROLEUSER"))}
+            inverseJoinColumns = {@JoinColumn(name = "role_id", foreignKey = @ForeignKey(name = "FK_ROLE_ROLEUSER"))}
     )
     private List<Role> roles;
 
