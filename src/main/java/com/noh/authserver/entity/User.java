@@ -16,6 +16,7 @@ import java.util.Set;
 
 @Data
 @Entity
+@Table(name = "USER")
 public class User extends BaseIdEntity implements UserDetails {
 
     private static final long serialVersionUID = 1L;

@@ -1,9 +1,14 @@
 package com.noh.authserver.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
+import javax.print.attribute.standard.MediaSize;
 import java.util.List;
 
+@Data
 @Entity
+@Table(name = "ROLE")
 public class Role extends BaseIdEntity {
 
     private String name;
@@ -15,20 +20,20 @@ public class Role extends BaseIdEntity {
     )
     private List<Permission> permissions;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public List<Permission> getPermissions() {
-        return permissions;
-    }
-
-    public void setPermissions(List<Permission> permissions) {
-        this.permissions = permissions;
-    }
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public List<Permission> getPermissions() {
+//        return permissions;
+//    }
+//
+//    public void setPermissions(List<Permission> permissions) {
+//        this.permissions = permissions;
+//    }
 
 }
